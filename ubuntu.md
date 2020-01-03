@@ -1,5 +1,22 @@
 ## Настройки для Ubuntu (18.4) после установки
 
+#### Настройка SSH-клиента
+```
+ssh-keygen -t rsa
+```
+
+#### Устанавливаем `nodejs` нужной версии
+```
+curl -sL https://deb.nodesource.com/setup_12.x | sudo bash -
+sudo apt install nodejs
+node --version
+```
+
+#### Увеличиваем лимит количества файловых наблюдателей
+```
+echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
+```
+
 #### Включение «Сворачивание в один клик» для док-панели Ubuntu
 ```
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
