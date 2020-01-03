@@ -17,6 +17,13 @@ node --version
 echo fs.inotify.max_user_watches=524288 | sudo tee -a /etc/sysctl.conf && sudo sysctl -p
 ```
 
+#### Устанавливаем программу для скриншотов
+```
+sudo add-apt-repository ppa:atareao/flameshot
+sudo apt update
+sudo apt install flameshot
+```
+
 #### Включение «Сворачивание в один клик» для док-панели Ubuntu
 ```
 gsettings set org.gnome.shell.extensions.dash-to-dock click-action 'minimize'
