@@ -18,7 +18,7 @@ Name: ESlint fix
 File type: any
 Scope: Project Files
 Program: ./node_modules/.bin/eslint
-Arguments: --fix $FilePatch$
+Arguments: --fix $FilePath$
 Output paths to refresh: $FileDir$
 Auto-save edited files to trigger the watcher: false
 Trigger the watcher on external changes: false
