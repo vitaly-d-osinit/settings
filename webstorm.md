@@ -5,21 +5,23 @@
 File > Import Settings...
 ```
 
-#### Устанавливаем доступ по программе `Early Access Preview`
-```
-File > Settings... > Apperance & Behavior > System Settings > Updates
-Automatically check updates for Early Access Preview
-```
+#### Устанавливаем доступ по программе `Early Access Preview`:
+* Переходим `File > Settings... > Apperance & Behavior > System Settings > Updates`
+* Устанавливаем `Automatically check updates for Early Access Preview`
 
 #### Настраиваем автоисправление `eslint` по `ctrl+s`
-```
-File > Settings... > Tools > File Watchers > Add > <custom>
-Name: ESlint fix
-File type: any
-Scope: Project Files
-Program: ./node_modules/.bin/eslint
-Arguments: --fix $FilePath$
-Output paths to refresh: $FileDir$
-Auto-save edited files to trigger the watcher: false
-Trigger the watcher on external changes: false
-```
+* Переходим `File > Settings... > Tools > File Watchers > Add
+* Выбираем `<custom>`
+* Устанавливаем:
+* * Name: `ESlint fix`
+* * File type: `any`
+* * Создаём новый Scope:
+* * * Выбираем `Local`
+* * * Name: `JS+TS`
+* * * Pattern: `file:*.js||file:*.jsx||file:*.ts||file:*.tsx`
+* * Выбираем `JS+TS` в поле Scope
+* * Program: `./node_modules/.bin/eslint`
+* * Arguments: `--fix $FilePath$`
+* * Output paths to refresh: `$FileDir$`
+* * Auto-save edited files to trigger the watcher: `false`
+* * Trigger the watcher on external changes: `false`
